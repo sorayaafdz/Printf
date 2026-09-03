@@ -586,9 +586,3 @@ This project was completed as part of my **42 Madrid Common Core**.
 Software Developer · 42 Madrid Common Core
 
 GitHub: **[@sorayaafdz](https://github.com/sorayaafdz)**
-
----
-
-<p align="center">
-  <i>Understanding the low level to build better software.</i>
-</p>
