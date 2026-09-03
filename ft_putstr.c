@@ -6,18 +6,31 @@
 /*   By: sofernan <sofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 13:47:54 by sofernan          #+#    #+#             */
-/*   Updated: 2024/07/30 20:09:57 by sofernan         ###   ########.fr       */
+/*   Updated: 2024/08/13 21:52:24 by sofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+size_t	ft_strlen(const char *str)
+{
+	int	count;
+
+	count = 0;
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return (count);
+}
 
 int	ft_putstr(char *str)
 {
 	int	len;
 
 	if (!str)
-		str = "(nil)";
+		str = "(null)";
 	len = ft_strlen(str);
 	return (write(1, str, len));
 }

@@ -6,7 +6,7 @@
 /*   By: sofernan <sofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 13:47:26 by sofernan          #+#    #+#             */
-/*   Updated: 2024/07/30 20:28:46 by sofernan         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:32:04 by sofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	converter(char format, va_list args)
 	return (1);
 }
 
-int	ft_printf(char const *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		i;

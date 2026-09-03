@@ -6,7 +6,7 @@
 #    By: sofernan <sofernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/01 13:48:03 by sofernan          #+#    #+#              #
-#    Updated: 2024/07/30 18:58:20 by sofernan         ###   ########.fr        #
+#    Updated: 2024/08/05 18:24:33 by sofernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
 SRCS = ft_putchar.c ft_printf.c ft_putstr.c \
-       ft_strlen.c ft_putchar_fd.c ft_print_ptr.c \
+       ft_print_ptr.c \
        ft_putnbr.c ft_print_unsigned.c	ft_print_hex.c
 
 OBJS = $(SRCS:.c=.o)

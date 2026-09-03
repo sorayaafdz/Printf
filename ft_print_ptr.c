@@ -6,11 +6,16 @@
 /*   By: sofernan <sofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 13:47:10 by sofernan          #+#    #+#             */
-/*   Updated: 2024/07/30 19:38:47 by sofernan         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:24:05 by sofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
 
 int	ft_ptr_len(size_t number)
 {
@@ -25,12 +30,12 @@ int	ft_ptr_len(size_t number)
 	return (len);
 }
 
-void	ft_put_ptr(size_t number)
+void	ft_put_ptr_hex(size_t number)
 {
 	if (number >= 16)
 	{
-		ft_put_ptr(number / 16);
-		ft_put_ptr(number % 16);
+		ft_put_ptr_hex(number / 16);
+		ft_put_ptr_hex(number % 16);
 	}
 	else
 	{
@@ -53,7 +58,7 @@ int	ft_print_ptr(size_t ptr)
 	else
 	{
 		len += write(1, "0x", 2);
-		ft_put_ptr(ptr);
+		ft_put_ptr_hex(ptr);
 		len += ft_ptr_len(ptr);
 	}
 	return (len);
